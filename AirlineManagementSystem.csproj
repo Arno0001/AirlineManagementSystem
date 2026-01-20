@@ -78,6 +78,9 @@
     <Compile Include="ViewFlights.Designer.cs">
       <DependentUpon>ViewFlights.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddPassenger.resx">
+      <DependentUpon>AddPassenger.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FlightTbl.resx">
       <DependentUpon>FlightTbl.cs</DependentUpon>
     </EmbeddedResource>

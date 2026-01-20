@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace AirlineManagementSystem
 {
-    public partial class AddPassenger : Form
+    public partial class AddPassenger: Form
     {
         public AddPassenger()
         {
             InitializeComponent();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
