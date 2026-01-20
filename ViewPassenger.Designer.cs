@@ -155,7 +155,7 @@
             this.label8.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Navy;
-            this.label8.Location = new System.Drawing.Point(24, 125);
+            this.label8.Location = new System.Drawing.Point(38, 128);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(115, 24);
             this.label8.TabIndex = 31;

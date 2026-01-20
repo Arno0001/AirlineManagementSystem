@@ -28,25 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddPassenger));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.PassId = new System.Windows.Forms.TextBox();
+            this.PassName = new System.Windows.Forms.TextBox();
+            this.PassportTb = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.PassAd = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.NationalityCb = new System.Windows.Forms.ComboBox();
+            this.GenderCb = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.PhonrTb = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -85,32 +88,32 @@
             this.label8.TabIndex = 23;
             this.label8.Text = "Passenger Id";
             // 
-            // textBox2
+            // PassId
             // 
-            this.textBox2.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(216, 165);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(152, 23);
-            this.textBox2.TabIndex = 24;
+            this.PassId.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PassId.Location = new System.Drawing.Point(216, 165);
+            this.PassId.Name = "PassId";
+            this.PassId.ReadOnly = true;
+            this.PassId.Size = new System.Drawing.Size(152, 23);
+            this.PassId.TabIndex = 24;
             // 
-            // textBox1
+            // PassName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(216, 219);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(152, 23);
-            this.textBox1.TabIndex = 25;
+            this.PassName.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PassName.Location = new System.Drawing.Point(216, 219);
+            this.PassName.Name = "PassName";
+            this.PassName.ReadOnly = true;
+            this.PassName.Size = new System.Drawing.Size(152, 23);
+            this.PassName.TabIndex = 25;
             // 
-            // textBox3
+            // PassportTb
             // 
-            this.textBox3.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(216, 270);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(152, 23);
-            this.textBox3.TabIndex = 26;
+            this.PassportTb.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PassportTb.Location = new System.Drawing.Point(216, 270);
+            this.PassportTb.Name = "PassportTb";
+            this.PassportTb.ReadOnly = true;
+            this.PassportTb.Size = new System.Drawing.Size(152, 23);
+            this.PassportTb.TabIndex = 26;
             // 
             // label3
             // 
@@ -149,14 +152,14 @@
             this.label5.TabIndex = 29;
             this.label5.Text = "Passenger Address";
             // 
-            // textBox4
+            // PassAd
             // 
-            this.textBox4.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(216, 324);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(152, 23);
-            this.textBox4.TabIndex = 30;
+            this.PassAd.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PassAd.Location = new System.Drawing.Point(216, 324);
+            this.PassAd.Name = "PassAd";
+            this.PassAd.ReadOnly = true;
+            this.PassAd.Size = new System.Drawing.Size(152, 23);
+            this.PassAd.TabIndex = 30;
             // 
             // label9
             // 
@@ -171,22 +174,22 @@
             this.label9.Text = "Nationality";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // comboBox3
+            // NationalityCb
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(216, 375);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 24);
-            this.comboBox3.TabIndex = 32;
-            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.NationalityCb.FormattingEnabled = true;
+            this.NationalityCb.Location = new System.Drawing.Point(216, 375);
+            this.NationalityCb.Name = "NationalityCb";
+            this.NationalityCb.Size = new System.Drawing.Size(121, 24);
+            this.NationalityCb.TabIndex = 32;
+            this.NationalityCb.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
-            // comboBox1
+            // GenderCb
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(216, 431);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 33;
+            this.GenderCb.FormattingEnabled = true;
+            this.GenderCb.Location = new System.Drawing.Point(216, 431);
+            this.GenderCb.Name = "GenderCb";
+            this.GenderCb.Size = new System.Drawing.Size(121, 24);
+            this.GenderCb.TabIndex = 33;
             // 
             // label6
             // 
@@ -212,14 +215,14 @@
             this.label7.TabIndex = 35;
             this.label7.Text = "Phone";
             // 
-            // textBox5
+            // PhonrTb
             // 
-            this.textBox5.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(216, 485);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(152, 23);
-            this.textBox5.TabIndex = 36;
+            this.PhonrTb.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PhonrTb.Location = new System.Drawing.Point(216, 485);
+            this.PhonrTb.Name = "PhonrTb";
+            this.PhonrTb.ReadOnly = true;
+            this.PhonrTb.Size = new System.Drawing.Size(152, 23);
+            this.PhonrTb.TabIndex = 36;
             // 
             // button2
             // 
@@ -258,27 +261,38 @@
             this.label11.Text = "X";
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(477, 161);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(279, 323);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 40;
+            this.pictureBox1.TabStop = false;
+            // 
             // AddPassenger
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 604);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.PhonrTb);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.GenderCb);
+            this.Controls.Add(this.NationalityCb);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.PassAd);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.PassportTb);
+            this.Controls.Add(this.PassName);
+            this.Controls.Add(this.PassId);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -287,6 +301,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddPassenger";
             this.Load += new System.EventHandler(this.AddPassenger_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,21 +312,22 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox PassId;
+        private System.Windows.Forms.TextBox PassName;
+        private System.Windows.Forms.TextBox PassportTb;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox PassAd;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox NationalityCb;
+        private System.Windows.Forms.ComboBox GenderCb;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox PhonrTb;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
