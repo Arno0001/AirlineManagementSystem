@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 namespace AirlineManagementSystem
 {
-    public partial class FlightTbl : Form
+    public partial class ViewPassenger : Form
     {
-        public FlightTbl()
+        public ViewPassenger()
         {
             InitializeComponent();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -26,5 +26,20 @@ namespace AirlineManagementSystem
         {
             Application.Exit();
         }
+
+        private void AddPassenger_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

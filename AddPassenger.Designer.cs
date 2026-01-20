@@ -169,6 +169,7 @@
             this.label9.Size = new System.Drawing.Size(103, 24);
             this.label9.TabIndex = 31;
             this.label9.Text = "Nationality";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // comboBox3
             // 
@@ -177,6 +178,7 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 24);
             this.comboBox3.TabIndex = 32;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // comboBox1
             // 
@@ -284,6 +286,7 @@
             this.Name = "AddPassenger";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddPassenger";
+            this.Load += new System.EventHandler(this.AddPassenger_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
