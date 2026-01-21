@@ -245,8 +245,9 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(124, 36);
             this.button1.TabIndex = 37;
-            this.button1.Text = "Login";
+            this.button1.Text = "Record";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label11
             // 
