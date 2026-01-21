@@ -90,29 +90,26 @@
             // 
             // PassId
             // 
-            this.PassId.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PassId.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PassId.Location = new System.Drawing.Point(216, 165);
             this.PassId.Name = "PassId";
-            this.PassId.ReadOnly = true;
-            this.PassId.Size = new System.Drawing.Size(152, 23);
+            this.PassId.Size = new System.Drawing.Size(152, 28);
             this.PassId.TabIndex = 24;
             // 
             // PassName
             // 
-            this.PassName.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PassName.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PassName.Location = new System.Drawing.Point(216, 219);
             this.PassName.Name = "PassName";
-            this.PassName.ReadOnly = true;
-            this.PassName.Size = new System.Drawing.Size(152, 23);
+            this.PassName.Size = new System.Drawing.Size(152, 28);
             this.PassName.TabIndex = 25;
             // 
             // PassportTb
             // 
-            this.PassportTb.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PassportTb.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PassportTb.Location = new System.Drawing.Point(216, 270);
             this.PassportTb.Name = "PassportTb";
-            this.PassportTb.ReadOnly = true;
-            this.PassportTb.Size = new System.Drawing.Size(152, 23);
+            this.PassportTb.Size = new System.Drawing.Size(152, 28);
             this.PassportTb.TabIndex = 26;
             // 
             // label3
@@ -154,11 +151,10 @@
             // 
             // PassAd
             // 
-            this.PassAd.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PassAd.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PassAd.Location = new System.Drawing.Point(216, 324);
             this.PassAd.Name = "PassAd";
-            this.PassAd.ReadOnly = true;
-            this.PassAd.Size = new System.Drawing.Size(152, 23);
+            this.PassAd.Size = new System.Drawing.Size(152, 28);
             this.PassAd.TabIndex = 30;
             // 
             // label9
@@ -177,6 +173,14 @@
             // NationalityCb
             // 
             this.NationalityCb.FormattingEnabled = true;
+            this.NationalityCb.Items.AddRange(new object[] {
+            "BANGLADESHI ",
+            "INDIAN",
+            "CHINESE",
+            "AMERICAN",
+            "NIGERIAN",
+            "SPANISH",
+            "TURKISH"});
             this.NationalityCb.Location = new System.Drawing.Point(216, 375);
             this.NationalityCb.Name = "NationalityCb";
             this.NationalityCb.Size = new System.Drawing.Size(121, 24);
@@ -186,6 +190,9 @@
             // GenderCb
             // 
             this.GenderCb.FormattingEnabled = true;
+            this.GenderCb.Items.AddRange(new object[] {
+            "MALE ",
+            "FEMALE"});
             this.GenderCb.Location = new System.Drawing.Point(216, 431);
             this.GenderCb.Name = "GenderCb";
             this.GenderCb.Size = new System.Drawing.Size(121, 24);
@@ -217,11 +224,10 @@
             // 
             // PhonrTb
             // 
-            this.PhonrTb.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PhonrTb.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PhonrTb.Location = new System.Drawing.Point(216, 485);
             this.PhonrTb.Name = "PhonrTb";
-            this.PhonrTb.ReadOnly = true;
-            this.PhonrTb.Size = new System.Drawing.Size(152, 23);
+            this.PhonrTb.Size = new System.Drawing.Size(152, 28);
             this.PhonrTb.TabIndex = 36;
             // 
             // button2
@@ -277,23 +283,23 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 604);
+            this.Controls.Add(this.GenderCb);
+            this.Controls.Add(this.NationalityCb);
+            this.Controls.Add(this.PhonrTb);
+            this.Controls.Add(this.PassAd);
+            this.Controls.Add(this.PassportTb);
+            this.Controls.Add(this.PassName);
+            this.Controls.Add(this.PassId);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.PhonrTb);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.GenderCb);
-            this.Controls.Add(this.NationalityCb);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.PassAd);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.PassportTb);
-            this.Controls.Add(this.PassName);
-            this.Controls.Add(this.PassId);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
