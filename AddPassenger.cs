@@ -17,7 +17,7 @@ namespace AirlineManagementSystem
               AttachDbFilename=C:\Users\ASUS\Documents\AirlineDb.mdf;
               Integrated Security=True;
               Connect Timeout=30;
-              Encrypt=True"
+              Encrypt=False"
         );
 
         private void AddPassenger_Load(object sender, EventArgs e)
@@ -77,6 +77,18 @@ namespace AirlineManagementSystem
                     MessageBox.Show(Ex.Message);
                 }
             }
+        }
+
+        private void PassId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ViewPassenger viewpass = new ViewPassenger();
+            viewpass.Show();
+            this.Hide();
         }
     }
 }

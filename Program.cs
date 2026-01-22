@@ -16,7 +16,7 @@ namespace AirlineManagementSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AddPassenger());
+            Application.Run(new ViewPassenger());
         }
     }
 }

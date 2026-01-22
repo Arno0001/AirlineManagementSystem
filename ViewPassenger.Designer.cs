@@ -48,8 +48,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.PassengerDGV = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.PassengerDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -93,9 +93,10 @@
             this.label5.ForeColor = System.Drawing.Color.Navy;
             this.label5.Location = new System.Drawing.Point(413, 162);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(166, 24);
+            this.label5.Size = new System.Drawing.Size(82, 24);
             this.label5.TabIndex = 37;
-            this.label5.Text = "Passenger Address";
+            this.label5.Text = " Address";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -105,9 +106,9 @@
             this.label4.ForeColor = System.Drawing.Color.Navy;
             this.label4.Location = new System.Drawing.Point(24, 162);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(156, 24);
+            this.label4.Size = new System.Drawing.Size(88, 24);
             this.label4.TabIndex = 36;
-            this.label4.Text = "Passport Number";
+            this.label4.Text = "Passport ";
             // 
             // label3
             // 
@@ -115,7 +116,7 @@
             this.label3.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(413, 121);
+            this.label3.Location = new System.Drawing.Point(419, 121);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(148, 24);
             this.label3.TabIndex = 35;
@@ -148,6 +149,7 @@
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(152, 23);
             this.textBox2.TabIndex = 32;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label8
             // 
@@ -155,7 +157,7 @@
             this.label8.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Navy;
-            this.label8.Location = new System.Drawing.Point(38, 128);
+            this.label8.Location = new System.Drawing.Point(24, 129);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(115, 24);
             this.label8.TabIndex = 31;
@@ -233,8 +235,9 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(124, 36);
             this.button3.TabIndex = 48;
-            this.button3.Text = "Reset";
+            this.button3.Text = "Back";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -246,7 +249,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(124, 36);
             this.button2.TabIndex = 47;
-            this.button2.Text = "Delete";
+            this.button2.Text = "Reset";
             this.button2.UseVisualStyleBackColor = false;
             // 
             // button1
@@ -274,23 +277,25 @@
             this.button4.TabIndex = 49;
             this.button4.Text = "Update";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // dataGridView1
+            // PassengerDGV
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 418);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(794, 221);
-            this.dataGridView1.TabIndex = 50;
+            this.PassengerDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.PassengerDGV.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PassengerDGV.Location = new System.Drawing.Point(0, 430);
+            this.PassengerDGV.Name = "PassengerDGV";
+            this.PassengerDGV.RowHeadersWidth = 51;
+            this.PassengerDGV.RowTemplate.Height = 24;
+            this.PassengerDGV.Size = new System.Drawing.Size(818, 221);
+            this.PassengerDGV.TabIndex = 50;
             // 
             // ViewPassenger
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(818, 651);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.PassengerDGV);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -315,7 +320,7 @@
             this.Name = "ViewPassenger";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewPassenger";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PassengerDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -343,6 +348,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView PassengerDGV;
     }
 }
