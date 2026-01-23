@@ -40,13 +40,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.FlightDGV = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.FlightDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -96,18 +95,20 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(594, 252);
+            this.comboBox2.Location = new System.Drawing.Point(594, 255);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
+            this.comboBox2.Size = new System.Drawing.Size(121, 28);
             this.comboBox2.TabIndex = 28;
             // 
             // comboBox3
             // 
+            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(594, 178);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 24);
+            this.comboBox3.Size = new System.Drawing.Size(121, 28);
             this.comboBox3.TabIndex = 27;
             // 
             // label10
@@ -170,22 +171,11 @@
             // 
             // textBox2
             // 
-            this.textBox2.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(162, 176);
             this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(152, 23);
+            this.textBox2.Size = new System.Drawing.Size(152, 28);
             this.textBox2.TabIndex = 21;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 418);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(794, 221);
-            this.dataGridView1.TabIndex = 33;
             // 
             // button1
             // 
@@ -238,27 +228,32 @@
             this.button4.TabIndex = 37;
             this.button4.Text = "Back";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // textBox3
+            // FlightDGV
             // 
-            this.textBox3.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(333, 314);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(152, 23);
-            this.textBox3.TabIndex = 38;
+            this.FlightDGV.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.FlightDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.FlightDGV.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.FlightDGV.Location = new System.Drawing.Point(26, 416);
+            this.FlightDGV.Name = "FlightDGV";
+            this.FlightDGV.RowHeadersWidth = 51;
+            this.FlightDGV.RowTemplate.Height = 24;
+            this.FlightDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.FlightDGV.Size = new System.Drawing.Size(768, 223);
+            this.FlightDGV.TabIndex = 51;
+            this.FlightDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FlightDGV_CellContentClick);
             // 
             // ViewFlights
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(818, 651);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.FlightDGV);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.comboBox2);
@@ -274,7 +269,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ViewFlights";
             this.Text = "ViewFlights";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.ViewFlights_Load_1);
+            ((System.ComponentModel.ISupportInitialize)(this.FlightDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,11 +290,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.DataGridView FlightDGV;
     }
 }

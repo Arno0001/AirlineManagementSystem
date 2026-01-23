@@ -30,25 +30,27 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.PaddTb = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.PpassTb = new System.Windows.Forms.TextBox();
+            this.PnameTb = new System.Windows.Forms.TextBox();
+            this.PidTb = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.natcb = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.GendCb = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.PphoneTb = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.PassengerDGV = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.PassengerDGV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,7 +60,7 @@
             this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label1.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(291, 18);
+            this.label1.Location = new System.Drawing.Point(289, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(176, 35);
             this.label1.TabIndex = 4;
@@ -70,20 +72,20 @@
             this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label2.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(276, 62);
+            this.label2.Location = new System.Drawing.Point(276, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(207, 35);
             this.label2.TabIndex = 5;
             this.label2.Text = "View Passengers";
             // 
-            // textBox4
+            // PaddTb
             // 
-            this.textBox4.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(624, 162);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(152, 23);
-            this.textBox4.TabIndex = 38;
+            this.PaddTb.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PaddTb.Location = new System.Drawing.Point(624, 162);
+            this.PaddTb.Name = "PaddTb";
+            this.PaddTb.Size = new System.Drawing.Size(152, 28);
+            this.PaddTb.TabIndex = 38;
+            this.PaddTb.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label5
             // 
@@ -116,40 +118,38 @@
             this.label3.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(419, 121);
+            this.label3.Location = new System.Drawing.Point(413, 125);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(148, 24);
             this.label3.TabIndex = 35;
             this.label3.Text = "Passenger Name";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBox3
+            // PpassTb
             // 
-            this.textBox3.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(203, 166);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(152, 23);
-            this.textBox3.TabIndex = 34;
+            this.PpassTb.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PpassTb.Location = new System.Drawing.Point(203, 166);
+            this.PpassTb.Name = "PpassTb";
+            this.PpassTb.Size = new System.Drawing.Size(152, 28);
+            this.PpassTb.TabIndex = 34;
+            this.PpassTb.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // textBox1
+            // PnameTb
             // 
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(624, 125);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(152, 23);
-            this.textBox1.TabIndex = 33;
+            this.PnameTb.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PnameTb.Location = new System.Drawing.Point(624, 125);
+            this.PnameTb.Name = "PnameTb";
+            this.PnameTb.Size = new System.Drawing.Size(152, 28);
+            this.PnameTb.TabIndex = 33;
             // 
-            // textBox2
+            // PidTb
             // 
-            this.textBox2.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(203, 129);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(152, 23);
-            this.textBox2.TabIndex = 32;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.PidTb.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PidTb.Location = new System.Drawing.Point(203, 129);
+            this.PidTb.Name = "PidTb";
+            this.PidTb.Size = new System.Drawing.Size(152, 28);
+            this.PidTb.TabIndex = 32;
+            this.PidTb.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label8
             // 
@@ -175,14 +175,22 @@
             this.label9.TabIndex = 39;
             this.label9.Text = "Nationality";
             // 
-            // comboBox3
+            // natcb
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(203, 200);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 24);
-            this.comboBox3.TabIndex = 40;
-            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.natcb.FormattingEnabled = true;
+            this.natcb.Items.AddRange(new object[] {
+            "BANGLADESHI ",
+            "INDIAN",
+            "CHINESE",
+            "AMERICAN",
+            "NIGERIAN",
+            "SPANISH",
+            "TURKISH"});
+            this.natcb.Location = new System.Drawing.Point(203, 200);
+            this.natcb.Name = "natcb";
+            this.natcb.Size = new System.Drawing.Size(152, 24);
+            this.natcb.TabIndex = 40;
+            this.natcb.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -195,14 +203,18 @@
             this.label6.Size = new System.Drawing.Size(72, 24);
             this.label6.TabIndex = 41;
             this.label6.Text = "Gender";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // comboBox1
+            // GendCb
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(624, 200);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(129, 24);
-            this.comboBox1.TabIndex = 42;
+            this.GendCb.FormattingEnabled = true;
+            this.GendCb.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.GendCb.Location = new System.Drawing.Point(624, 200);
+            this.GendCb.Name = "GendCb";
+            this.GendCb.Size = new System.Drawing.Size(152, 24);
+            this.GendCb.TabIndex = 42;
             // 
             // label7
             // 
@@ -216,14 +228,13 @@
             this.label7.TabIndex = 43;
             this.label7.Text = "Phone";
             // 
-            // textBox5
+            // PphoneTb
             // 
-            this.textBox5.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(624, 237);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(152, 23);
-            this.textBox5.TabIndex = 44;
+            this.PphoneTb.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PphoneTb.Location = new System.Drawing.Point(624, 237);
+            this.PphoneTb.Name = "PphoneTb";
+            this.PphoneTb.Size = new System.Drawing.Size(152, 28);
+            this.PphoneTb.TabIndex = 44;
             // 
             // button3
             // 
@@ -245,12 +256,13 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(406, 296);
+            this.button2.Location = new System.Drawing.Point(405, 296);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(124, 36);
             this.button2.TabIndex = 47;
             this.button2.Text = "Reset";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -264,6 +276,7 @@
             this.button1.TabIndex = 46;
             this.button1.Text = "Delete";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button4
             // 
@@ -281,38 +294,62 @@
             // 
             // PassengerDGV
             // 
+            this.PassengerDGV.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.PassengerDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.PassengerDGV.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PassengerDGV.Location = new System.Drawing.Point(0, 430);
+            this.PassengerDGV.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.PassengerDGV.Location = new System.Drawing.Point(12, 392);
             this.PassengerDGV.Name = "PassengerDGV";
             this.PassengerDGV.RowHeadersWidth = 51;
             this.PassengerDGV.RowTemplate.Height = 24;
-            this.PassengerDGV.Size = new System.Drawing.Size(818, 221);
+            this.PassengerDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.PassengerDGV.Size = new System.Drawing.Size(852, 271);
             this.PassengerDGV.TabIndex = 50;
+            this.PassengerDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PassengerDGV_CellClick);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Navy;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.panel1.Location = new System.Drawing.Point(0, 687);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(879, 21);
+            this.panel1.TabIndex = 51;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Navy;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(879, 23);
+            this.panel2.TabIndex = 52;
             // 
             // ViewPassenger
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(818, 651);
+            this.ClientSize = new System.Drawing.Size(879, 708);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.PassengerDGV);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.PphoneTb);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.GendCb);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.natcb);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.PaddTb);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.PpassTb);
+            this.Controls.Add(this.PnameTb);
+            this.Controls.Add(this.PidTb);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -320,6 +357,7 @@
             this.Name = "ViewPassenger";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewPassenger";
+            this.Load += new System.EventHandler(this.ViewPassenger_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.PassengerDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -330,24 +368,26 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox PaddTb;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox PpassTb;
+        private System.Windows.Forms.TextBox PnameTb;
+        private System.Windows.Forms.TextBox PidTb;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox natcb;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox GendCb;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox PphoneTb;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DataGridView PassengerDGV;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
