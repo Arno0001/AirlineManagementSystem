@@ -182,5 +182,10 @@ namespace AirlineManagementSystem
         {
 
         }
+
+        private void PassengerDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

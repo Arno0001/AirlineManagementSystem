@@ -305,6 +305,7 @@
             this.PassengerDGV.Size = new System.Drawing.Size(852, 271);
             this.PassengerDGV.TabIndex = 50;
             this.PassengerDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PassengerDGV_CellClick);
+            this.PassengerDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PassengerDGV_CellContentClick);
             // 
             // panel1
             // 

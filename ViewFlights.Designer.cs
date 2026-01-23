@@ -30,16 +30,16 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.FDate = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.DstCb = new System.Windows.Forms.ComboBox();
+            this.SourceCb = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Seatnum = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.FcodeTb = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -72,13 +72,13 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "View Scheduled  Flights";
             // 
-            // dateTimePicker1
+            // FDate
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(162, 246);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(266, 28);
-            this.dateTimePicker1.TabIndex = 32;
+            this.FDate.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FDate.Location = new System.Drawing.Point(162, 246);
+            this.FDate.Name = "FDate";
+            this.FDate.Size = new System.Drawing.Size(266, 28);
+            this.FDate.TabIndex = 32;
             // 
             // label7
             // 
@@ -93,23 +93,23 @@
             this.label7.Text = "TakeOfDate";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // comboBox2
+            // DstCb
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(594, 255);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 28);
-            this.comboBox2.TabIndex = 28;
+            this.DstCb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DstCb.FormattingEnabled = true;
+            this.DstCb.Location = new System.Drawing.Point(594, 255);
+            this.DstCb.Name = "DstCb";
+            this.DstCb.Size = new System.Drawing.Size(121, 28);
+            this.DstCb.TabIndex = 28;
             // 
-            // comboBox3
+            // SourceCb
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(594, 178);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 28);
-            this.comboBox3.TabIndex = 27;
+            this.SourceCb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SourceCb.FormattingEnabled = true;
+            this.SourceCb.Location = new System.Drawing.Point(594, 178);
+            this.SourceCb.Name = "SourceCb";
+            this.SourceCb.Size = new System.Drawing.Size(121, 28);
+            this.SourceCb.TabIndex = 27;
             // 
             // label10
             // 
@@ -135,14 +135,14 @@
             this.label9.TabIndex = 25;
             this.label9.Text = "Source";
             // 
-            // textBox1
+            // Seatnum
             // 
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(365, 317);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(152, 23);
-            this.textBox1.TabIndex = 24;
+            this.Seatnum.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Seatnum.Location = new System.Drawing.Point(365, 317);
+            this.Seatnum.Name = "Seatnum";
+            this.Seatnum.ReadOnly = true;
+            this.Seatnum.Size = new System.Drawing.Size(152, 23);
+            this.Seatnum.TabIndex = 24;
             // 
             // label4
             // 
@@ -169,13 +169,13 @@
             this.label8.TabIndex = 22;
             this.label8.Text = "Flight Code";
             // 
-            // textBox2
+            // FcodeTb
             // 
-            this.textBox2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(162, 176);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(152, 28);
-            this.textBox2.TabIndex = 21;
+            this.FcodeTb.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FcodeTb.Location = new System.Drawing.Point(162, 176);
+            this.FcodeTb.Name = "FcodeTb";
+            this.FcodeTb.Size = new System.Drawing.Size(152, 28);
+            this.FcodeTb.TabIndex = 21;
             // 
             // button1
             // 
@@ -215,6 +215,7 @@
             this.button3.TabIndex = 36;
             this.button3.Text = "Reset";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -254,16 +255,16 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.FDate);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.DstCb);
+            this.Controls.Add(this.SourceCb);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Seatnum);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.FcodeTb);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -280,16 +281,16 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker FDate;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox DstCb;
+        private System.Windows.Forms.ComboBox SourceCb;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Seatnum;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox FcodeTb;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;

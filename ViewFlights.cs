@@ -59,6 +59,13 @@ namespace AirlineManagementSystem
 
         private void FlightDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex < 0) return;
+
+            DataGridViewRow row = FlightDGV.Rows[e.RowIndex];
+
+            FcodeTb.Text = row.Cells[0].Value?.ToString();
+            SourceCb.SelectedItem = row.Cells[1].Value?.ToString();
+            DstCb.SelectedItem = row.Cells[2].Value?.ToString();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -74,6 +81,13 @@ namespace AirlineManagementSystem
 
         private void label7_Click(object sender, EventArgs e)
         {
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FcodeTb.Text = "";
+            Seatnum.Text = "";
+
         }
     }
 }
