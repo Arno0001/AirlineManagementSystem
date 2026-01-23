@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace AirlineManagementSystem
@@ -66,6 +67,7 @@ namespace AirlineManagementSystem
             FcodeTb.Text = row.Cells[0].Value?.ToString();
             SourceCb.SelectedItem = row.Cells[1].Value?.ToString();
             DstCb.SelectedItem = row.Cells[2].Value?.ToString();
+            Seatnum.Text = row.Cells[4].Value?.ToString();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -87,7 +89,93 @@ namespace AirlineManagementSystem
         {
             FcodeTb.Text = "";
             Seatnum.Text = "";
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (FcodeTb.Text == "" || SourceCb.SelectedItem == null || DstCb.SelectedItem == null || Seatnum.Text == "")
+            {
+                MessageBox.Show("Missing Information");
+            }
+            else
+            {
+                try
+                {
+                    if (Con.State == ConnectionState.Open)
+                        Con.Close();
+
+                    Con.Open();
+
+                    string query = @"UPDATE FlightTbl
+                                     SET Fsrc=@src, FDest=@dest, FDate=@date, FCap=@cap
+                                     WHERE Fcode=@code";
+
+                    SqlCommand cmd = new SqlCommand(query, Con);
+                    cmd.Parameters.AddWithValue("@src", SourceCb.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@dest", DstCb.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@date", FDate.Value.Date);
+                    cmd.Parameters.AddWithValue("@cap", Seatnum.Text);
+                    cmd.Parameters.AddWithValue("@code", FcodeTb.Text);
+
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Flight Updated Successfully");
+                    populate();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Update failed: " + ex.Message);
+                }
+                finally
+                {
+                    if (Con.State == ConnectionState.Open)
+                        Con.Close();
+                }
+            }
+
+            FcodeTb.Text = "";
+            Seatnum.Text = "";
+            SourceCb.SelectedItem = null;
+            DstCb.SelectedItem = null;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (FcodeTb.Text == "")
+            {
+                MessageBox.Show("Enter The Flight to Delete");
+            }
+            else
+            {
+                try
+                {
+                    if (Con.State == ConnectionState.Open)
+                        Con.Close();
+
+                    Con.Open();
+
+                    string query = "DELETE FROM FlightTbl WHERE Fcode=@code";
+                    SqlCommand cmd = new SqlCommand(query, Con);
+                    cmd.Parameters.AddWithValue("@code", FcodeTb.Text);
+
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Flight Deleted Successfully");
+                    populate();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    if (Con.State == ConnectionState.Open)
+                        Con.Close();
+                }
+            }
+
+            FcodeTb.Text = "";
+            Seatnum.Text = "";
+            SourceCb.SelectedItem = null;
+            DstCb.SelectedItem = null;
         }
     }
 }

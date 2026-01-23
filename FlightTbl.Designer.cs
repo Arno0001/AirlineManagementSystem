@@ -227,9 +227,9 @@
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label10.Location = new System.Drawing.Point(83, 255);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(66, 24);
+            this.label10.Size = new System.Drawing.Size(108, 24);
             this.label10.TabIndex = 13;
-            this.label10.Text = "Source";
+            this.label10.Text = "Destination";
             // 
             // panel2
             // 
