@@ -1,0 +1,40 @@
+CREATE TABLE [dbo].[CancelTbl]
+(
+	[CancId] INT NOT NULL PRIMARY KEY, 
+    [TicId] INT NOT NULL, 
+    [FlCode] VARCHAR(50) NOT NULL, 
+    [CancDate] VARCHAR(50) NOT NULL
+)
+CREATE TABLE [dbo].[FlightTbl] (
+    [Fcode] VARCHAR (20) NOT NULL,
+    [Fsrc]  VARCHAR (20) NOT NULL,
+    [FDest] VARCHAR (20) NOT NULL,
+    [FDate] VARCHAR (50) NOT NULL,
+    [FCap]  INT          NOT NULL,
+    PRIMARY KEY CLUSTERED ([Fcode] ASC)
+);
+
+CREATE TABLE [dbo].[PassengerTbl] (
+    [PassId]    INT          NOT NULL,
+    [PassName]  VARCHAR (20) NOT NULL,
+    [Passport]  VARCHAR (20) NOT NULL,
+    [PassAd]    VARCHAR (50) NOT NULL,
+    [PassNat]   VARCHAR (50) NOT NULL,
+    [PassGend]  VARCHAR (10) NOT NULL,
+    [PassPhone] VARCHAR (20) NOT NULL,
+    PRIMARY KEY CLUSTERED ([PassId] ASC)
+);
+
+CREATE TABLE [dbo].[TicketTbl] (
+    [Tid]     INT          NOT NULL,
+    [Fcode]   VARCHAR (50) NOT NULL,
+    [Pid]     INT          NOT NULL,
+    [PName]   VARCHAR (50) NOT NULL,
+    [PPass]   VARCHAR (50) NOT NULL,
+    [PNation] VARCHAR (50) NOT NULL,
+    [Amt]     INT          NOT NULL,
+    PRIMARY KEY CLUSTERED ([Tid] ASC)
+);
+
+
+
