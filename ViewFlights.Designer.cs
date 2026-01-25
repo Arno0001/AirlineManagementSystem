@@ -75,7 +75,7 @@
             // FDate
             // 
             this.FDate.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FDate.Location = new System.Drawing.Point(182, 323);
+            this.FDate.Location = new System.Drawing.Point(173, 227);
             this.FDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.FDate.Name = "FDate";
             this.FDate.Size = new System.Drawing.Size(299, 28);
@@ -87,7 +87,7 @@
             this.label7.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Navy;
-            this.label7.Location = new System.Drawing.Point(25, 331);
+            this.label7.Location = new System.Drawing.Point(39, 227);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(107, 24);
             this.label7.TabIndex = 31;
@@ -106,7 +106,7 @@
             "Barcelona",
             "Paris",
             "Italy"});
-            this.DstCb.Location = new System.Drawing.Point(668, 335);
+            this.DstCb.Location = new System.Drawing.Point(639, 230);
             this.DstCb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DstCb.Name = "DstCb";
             this.DstCb.Size = new System.Drawing.Size(136, 28);
@@ -124,7 +124,7 @@
             "Barcelona",
             "Paris",
             "Italy"});
-            this.SourceCb.Location = new System.Drawing.Point(668, 234);
+            this.SourceCb.Location = new System.Drawing.Point(614, 154);
             this.SourceCb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SourceCb.Name = "SourceCb";
             this.SourceCb.Size = new System.Drawing.Size(136, 28);
@@ -136,7 +136,7 @@
             this.label10.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Navy;
-            this.label10.Location = new System.Drawing.Point(507, 331);
+            this.label10.Location = new System.Drawing.Point(502, 227);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(108, 24);
             this.label10.TabIndex = 26;
@@ -148,7 +148,7 @@
             this.label9.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Navy;
-            this.label9.Location = new System.Drawing.Point(507, 234);
+            this.label9.Location = new System.Drawing.Point(502, 158);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(66, 24);
             this.label9.TabIndex = 25;
@@ -157,7 +157,7 @@
             // Seatnum
             // 
             this.Seatnum.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Seatnum.Location = new System.Drawing.Point(411, 416);
+            this.Seatnum.Location = new System.Drawing.Point(423, 290);
             this.Seatnum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Seatnum.Name = "Seatnum";
             this.Seatnum.Size = new System.Drawing.Size(170, 28);
@@ -169,7 +169,7 @@
             this.label4.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Navy;
-            this.label4.Location = new System.Drawing.Point(226, 416);
+            this.label4.Location = new System.Drawing.Point(244, 290);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(133, 24);
             this.label4.TabIndex = 23;
@@ -182,16 +182,17 @@
             this.label8.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Navy;
-            this.label8.Location = new System.Drawing.Point(28, 234);
+            this.label8.Location = new System.Drawing.Point(39, 154);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(104, 24);
             this.label8.TabIndex = 22;
             this.label8.Text = "Flight Code";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // FcodeTb
             // 
             this.FcodeTb.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FcodeTb.Location = new System.Drawing.Point(182, 231);
+            this.FcodeTb.Location = new System.Drawing.Point(173, 154);
             this.FcodeTb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.FcodeTb.Name = "FcodeTb";
             this.FcodeTb.Size = new System.Drawing.Size(170, 28);
@@ -203,7 +204,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(135, 476);
+            this.button1.Location = new System.Drawing.Point(133, 365);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(140, 47);
@@ -218,7 +219,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(294, 476);
+            this.button2.Location = new System.Drawing.Point(309, 365);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(140, 47);
@@ -233,7 +234,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(453, 476);
+            this.button3.Location = new System.Drawing.Point(486, 365);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(140, 47);
@@ -248,7 +249,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Location = new System.Drawing.Point(614, 476);
+            this.button4.Location = new System.Drawing.Point(658, 365);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(140, 47);
@@ -262,7 +263,7 @@
             this.FlightDGV.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.FlightDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.FlightDGV.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.FlightDGV.Location = new System.Drawing.Point(78, 531);
+            this.FlightDGV.Location = new System.Drawing.Point(67, 471);
             this.FlightDGV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.FlightDGV.Name = "FlightDGV";
             this.FlightDGV.RowHeadersWidth = 51;
@@ -276,7 +277,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(920, 800);
+            this.ClientSize = new System.Drawing.Size(920, 756);
             this.Controls.Add(this.FlightDGV);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);

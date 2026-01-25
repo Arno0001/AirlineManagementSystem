@@ -55,6 +55,7 @@
             this.TidCb.Name = "TidCb";
             this.TidCb.Size = new System.Drawing.Size(152, 29);
             this.TidCb.TabIndex = 89;
+            this.TidCb.SelectedIndexChanged += new System.EventHandler(this.TidCb_SelectedIndexChanged_1);
             this.TidCb.SelectionChangeCommitted += new System.EventHandler(this.TidCb_SelectionChangeCommitted);
             // 
             // CanId
@@ -202,7 +203,6 @@
             this.button3.TabIndex = 93;
             this.button3.Text = "Back";
             this.button3.UseVisualStyleBackColor = false;
-           
             // 
             // button2
             // 

@@ -155,5 +155,10 @@ namespace AirlineManagementSystem
         {
             fetchfcode();
         }
+
+        private void TidCb_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
