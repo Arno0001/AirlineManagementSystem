@@ -1,0 +1,17 @@
+﻿IF OBJECT_ID('dbo.TicketTbl', 'U') IS NOT NULL
+    DROP TABLE dbo.TicketTbl;
+GO
+
+CREATE TABLE dbo.TicketTbl
+(
+    Tid INT NOT NULL PRIMARY KEY,
+    Fcode VARCHAR(50) NOT NULL,
+    Pid INT NOT NULL,
+    PName VARCHAR(50) NOT NULL,
+    PGen VARCHAR(10) NOT NULL,
+    PPass VARBINARY(50) NOT NULL,
+    PNation VARCHAR(50) NOT NULL,
+    Page INT NOT NULL,
+    Amt INT NOT NULL
+);
+GO

@@ -13,12 +13,12 @@ namespace AirlineManagementSystem
         }
 
         SqlConnection Con = new SqlConnection(
-            @"Data Source=(LocalDB)\MSSQLLocalDB;
-              AttachDbFilename=C:\Users\ASUS\Documents\AirlineDb.mdf;
-              Integrated Security=True;
-              Connect Timeout=30;
-              Encrypt=False"
-        );
+     @"Data Source=(LocalDB)\MSSQLLocalDB;
+      AttachDbFilename=C:\Users\ASUS\Documents\AirlineDb.mdf;
+      Integrated Security=True;
+      Connect Timeout=30;
+      Encrypt=False");
+
 
         private void AddPassenger_Load(object sender, EventArgs e)
         {
@@ -47,7 +47,9 @@ namespace AirlineManagementSystem
                 PassAd.Text == "" ||
                 PassName.Text == "" ||
                 PassportTb.Text == "" ||
-                PhonrTb.Text == "")
+                PhonrTb.Text == "" ||
+                NationalityCb.SelectedIndex == -1 ||
+                GenderCb.SelectedIndex == -1)
             {
                 MessageBox.Show("Missing Information");
             }
@@ -55,15 +57,16 @@ namespace AirlineManagementSystem
             {
                 try
                 {
+                    if (Con.State == ConnectionState.Open) Con.Close();
                     Con.Open();
 
                     string query = "insert into PassengerTbl values(" +
-                                   PassId.Text + ", '" +
-                                   PassName.Text + "', '" +
-                                   PassportTb.Text + "', '" +
-                                   PassAd.Text + "', '" +
-                                   NationalityCb.SelectedItem.ToString() + "', '" +
-                                   GenderCb.SelectedItem.ToString() + "', '" +
+                                   PassId.Text + ",'" +
+                                   PassName.Text + "','" +
+                                   PassportTb.Text + "','" +
+                                   PassAd.Text + "','" +
+                                   NationalityCb.SelectedItem.ToString() + "','" +
+                                   GenderCb.SelectedItem.ToString() + "','" +
                                    PhonrTb.Text + "')";
 
                     SqlCommand cmd = new SqlCommand(query, Con);
@@ -75,13 +78,24 @@ namespace AirlineManagementSystem
                 catch (Exception Ex)
                 {
                     MessageBox.Show(Ex.Message);
+                    if (Con.State == ConnectionState.Open) Con.Close();
                 }
             }
         }
 
         private void PassId_TextChanged(object sender, EventArgs e)
         {
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            PassId.Text = "";
+            PassName.Text = "";
+            PassportTb.Text = "";
+            PassAd.Text = "";
+            PhonrTb.Text = "";
+            NationalityCb.SelectedIndex = -1;
+            GenderCb.SelectedIndex = -1;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -89,6 +103,11 @@ namespace AirlineManagementSystem
             ViewPassenger viewpass = new ViewPassenger();
             viewpass.Show();
             this.Hide();
+        }
+
+        private void PassportTb_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

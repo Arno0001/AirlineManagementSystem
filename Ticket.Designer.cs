@@ -34,32 +34,29 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.PPassTb = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.PNatTb = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.PAmtTb = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.PNameTb = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Tid = new System.Windows.Forms.TextBox();
+            this.FCodeCb = new System.Windows.Forms.ComboBox();
+            this.PIdCb = new System.Windows.Forms.ComboBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.TicketDGV = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.TicketDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -105,7 +102,7 @@
             this.label3.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(416, 118);
+            this.label3.Location = new System.Drawing.Point(415, 120);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(104, 24);
             this.label3.TabIndex = 54;
@@ -126,21 +123,21 @@
             this.label5.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Navy;
-            this.label5.Location = new System.Drawing.Point(416, 158);
+            this.label5.Location = new System.Drawing.Point(416, 161);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 24);
             this.label5.TabIndex = 57;
             this.label5.Text = "Name";
             // 
-            // textBox5
+            // PPassTb
             // 
-            this.textBox5.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(197, 207);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(152, 23);
-            this.textBox5.TabIndex = 60;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.PPassTb.Enabled = false;
+            this.PPassTb.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PPassTb.Location = new System.Drawing.Point(197, 207);
+            this.PPassTb.Name = "PPassTb";
+            this.PPassTb.ReadOnly = true;
+            this.PPassTb.Size = new System.Drawing.Size(152, 28);
+            this.PPassTb.TabIndex = 77;
             // 
             // label6
             // 
@@ -148,21 +145,22 @@
             this.label6.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Navy;
-            this.label6.Location = new System.Drawing.Point(38, 203);
+            this.label6.Location = new System.Drawing.Point(41, 211);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(83, 24);
             this.label6.TabIndex = 59;
             this.label6.Text = "Passport";
             // 
-            // textBox6
+            // PNatTb
             // 
-            this.textBox6.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(581, 211);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(152, 23);
-            this.textBox6.TabIndex = 62;
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            this.PNatTb.Enabled = false;
+            this.PNatTb.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PNatTb.Location = new System.Drawing.Point(581, 211);
+            this.PNatTb.Name = "PNatTb";
+            this.PNatTb.ReadOnly = true;
+            this.PNatTb.Size = new System.Drawing.Size(152, 28);
+            this.PNatTb.TabIndex = 62;
+            this.PNatTb.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // label7
             // 
@@ -176,35 +174,13 @@
             this.label7.TabIndex = 61;
             this.label7.Text = "Nationality";
             // 
-            // textBox7
+            // PAmtTb
             // 
-            this.textBox7.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(197, 257);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(152, 23);
-            this.textBox7.TabIndex = 64;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Navy;
-            this.label9.Location = new System.Drawing.Point(38, 253);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(41, 24);
-            this.label9.TabIndex = 63;
-            this.label9.Text = "Age";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(581, 261);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(152, 23);
-            this.textBox8.TabIndex = 66;
+            this.PAmtTb.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PAmtTb.Location = new System.Drawing.Point(369, 265);
+            this.PAmtTb.Name = "PAmtTb";
+            this.PAmtTb.Size = new System.Drawing.Size(152, 28);
+            this.PAmtTb.TabIndex = 66;
             // 
             // label10
             // 
@@ -212,7 +188,7 @@
             this.label10.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Navy;
-            this.label10.Location = new System.Drawing.Point(416, 257);
+            this.label10.Location = new System.Drawing.Point(246, 265);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(78, 24);
             this.label10.TabIndex = 65;
@@ -224,21 +200,12 @@
             this.label12.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label12.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label12.Location = new System.Drawing.Point(302, 292);
+            this.label12.Location = new System.Drawing.Point(364, 380);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(156, 28);
+            this.label12.Size = new System.Drawing.Size(94, 28);
             this.label12.TabIndex = 67;
-            this.label12.Text = "Ticket Booking ";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(59, 348);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(704, 280);
-            this.dataGridView1.TabIndex = 70;
+            this.label12.Text = "Booking ";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // textBox9
             // 
@@ -248,30 +215,6 @@
             this.textBox9.ReadOnly = true;
             this.textBox9.Size = new System.Drawing.Size(146, 23);
             this.textBox9.TabIndex = 69;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Navy;
-            this.label13.Location = new System.Drawing.Point(38, 117);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(115, 24);
-            this.label13.TabIndex = 68;
-            this.label13.Text = "Passenger Id";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Navy;
-            this.label8.Location = new System.Drawing.Point(38, 162);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(80, 24);
-            this.label8.TabIndex = 51;
-            this.label8.Text = "Ticket Id";
             // 
             // comboBox3
             // 
@@ -319,44 +262,22 @@
             this.label15.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label15.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Navy;
-            this.label15.Location = new System.Drawing.Point(38, 162);
+            this.label15.Location = new System.Drawing.Point(38, 166);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(80, 24);
+            this.label15.Size = new System.Drawing.Size(115, 24);
             this.label15.TabIndex = 51;
-            this.label15.Text = "Ticket Id";
+            this.label15.Text = "Passenger Id";
             // 
-            // label16
+            // PNameTb
             // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label16.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.Navy;
-            this.label16.Location = new System.Drawing.Point(416, 118);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(104, 24);
-            this.label16.TabIndex = 54;
-            this.label16.Text = "Flight Code";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label17.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.Navy;
-            this.label17.Location = new System.Drawing.Point(416, 158);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(59, 24);
-            this.label17.TabIndex = 57;
-            this.label17.Text = "Name";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(581, 162);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(152, 23);
-            this.textBox1.TabIndex = 58;
+            this.PNameTb.Enabled = false;
+            this.PNameTb.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PNameTb.Location = new System.Drawing.Point(581, 162);
+            this.PNameTb.Name = "PNameTb";
+            this.PNameTb.ReadOnly = true;
+            this.PNameTb.Size = new System.Drawing.Size(152, 28);
+            this.PNameTb.TabIndex = 58;
+            this.PNameTb.TextChanged += new System.EventHandler(this.PNameTb_TextChanged);
             // 
             // label18
             // 
@@ -364,68 +285,123 @@
             this.label18.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label18.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Navy;
-            this.label18.Location = new System.Drawing.Point(38, 117);
+            this.label18.Location = new System.Drawing.Point(41, 120);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(115, 24);
+            this.label18.Size = new System.Drawing.Size(80, 24);
             this.label18.TabIndex = 68;
-            this.label18.Text = "Passenger Id";
+            this.label18.Text = "Ticket Id";
             // 
-            // textBox2
+            // Tid
             // 
-            this.textBox2.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(203, 118);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(146, 23);
-            this.textBox2.TabIndex = 69;
+            this.Tid.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tid.Location = new System.Drawing.Point(203, 118);
+            this.Tid.Name = "Tid";
+            this.Tid.Size = new System.Drawing.Size(146, 26);
+            this.Tid.TabIndex = 69;
             // 
-            // comboBox2
+            // FCodeCb
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(581, 117);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(152, 24);
-            this.comboBox2.TabIndex = 71;
+            this.FCodeCb.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FCodeCb.FormattingEnabled = true;
+            this.FCodeCb.Location = new System.Drawing.Point(581, 117);
+            this.FCodeCb.Name = "FCodeCb";
+            this.FCodeCb.Size = new System.Drawing.Size(152, 29);
+            this.FCodeCb.TabIndex = 71;
             // 
-            // comboBox4
+            // PIdCb
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(203, 165);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(146, 24);
-            this.comboBox4.TabIndex = 72;
+            this.PIdCb.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PIdCb.FormattingEnabled = true;
+            this.PIdCb.Location = new System.Drawing.Point(203, 165);
+            this.PIdCb.Name = "PIdCb";
+            this.PIdCb.Size = new System.Drawing.Size(146, 29);
+            this.PIdCb.TabIndex = 72;
+            this.PIdCb.SelectionChangeCommitted += new System.EventHandler(this.PIdCb_SelectionChangeCommitted);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Navy;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button4.Location = new System.Drawing.Point(143, 313);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(124, 36);
+            this.button4.TabIndex = 75;
+            this.button4.Text = "Book";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Navy;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button3.Location = new System.Drawing.Point(581, 313);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(124, 36);
+            this.button3.TabIndex = 74;
+            this.button3.Text = "Back";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Navy;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.Location = new System.Drawing.Point(351, 313);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(124, 36);
+            this.button2.TabIndex = 73;
+            this.button2.Text = "Reset";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // TicketDGV
+            // 
+            this.TicketDGV.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.TicketDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TicketDGV.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.TicketDGV.Location = new System.Drawing.Point(33, 425);
+            this.TicketDGV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TicketDGV.Name = "TicketDGV";
+            this.TicketDGV.RowHeadersWidth = 51;
+            this.TicketDGV.RowTemplate.Height = 24;
+            this.TicketDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.TicketDGV.Size = new System.Drawing.Size(761, 248);
+            this.TicketDGV.TabIndex = 76;
             // 
             // Ticket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(818, 651);
-            this.Controls.Add(this.comboBox4);
+            this.ClientSize = new System.Drawing.Size(835, 686);
+            this.Controls.Add(this.TicketDGV);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.PIdCb);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.FCodeCb);
             this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.Tid);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.PAmtTb);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.PNatTb);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.PPassTb);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.PNameTb);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label17);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label16);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label2);
@@ -435,7 +411,8 @@
             this.Name = "Ticket";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Amount";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Ticket_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.TicketDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -449,30 +426,27 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox PPassTb;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox PNatTb;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox PAmtTb;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox PNameTb;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.TextBox Tid;
+        private System.Windows.Forms.ComboBox FCodeCb;
+        private System.Windows.Forms.ComboBox PIdCb;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView TicketDGV;
     }
 }

@@ -115,6 +115,7 @@
             this.PassportTb.Name = "PassportTb";
             this.PassportTb.Size = new System.Drawing.Size(152, 28);
             this.PassportTb.TabIndex = 26;
+            this.PassportTb.TextChanged += new System.EventHandler(this.PassportTb_TextChanged);
             // 
             // label3
             // 

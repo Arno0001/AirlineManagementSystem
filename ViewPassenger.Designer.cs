@@ -298,6 +298,7 @@
             this.PassengerDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PassengerDGV.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.PassengerDGV.Location = new System.Drawing.Point(12, 392);
+            this.PassengerDGV.MultiSelect = false;
             this.PassengerDGV.Name = "PassengerDGV";
             this.PassengerDGV.RowHeadersWidth = 51;
             this.PassengerDGV.RowTemplate.Height = 24;
@@ -305,7 +306,6 @@
             this.PassengerDGV.Size = new System.Drawing.Size(852, 271);
             this.PassengerDGV.TabIndex = 50;
             this.PassengerDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PassengerDGV_CellClick);
-            this.PassengerDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PassengerDGV_CellContentClick);
             // 
             // panel1
             // 
@@ -358,7 +358,7 @@
             this.Name = "ViewPassenger";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewPassenger";
-            this.Load += new System.EventHandler(this.ViewPassenger_Load_1);
+            this.Load += new System.EventHandler(this.ViewPassenger_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PassengerDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

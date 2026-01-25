@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace AirlineManagementSystem
 {
     public partial class ViewFlights : Form
     {
-        private readonly SqlConnection Con = new SqlConnection(
+        SqlConnection Con = new SqlConnection(
             @"Data Source=(LocalDB)\MSSQLLocalDB;
               AttachDbFilename=C:\Users\ASUS\Documents\AirlineDb.mdf;
               Integrated Security=True;
               Connect Timeout=30;
-              Encrypt=False"
-        );
+              Encrypt=False");
 
         public ViewFlights()
         {
@@ -25,26 +23,22 @@ namespace AirlineManagementSystem
         {
             try
             {
-                if (Con.State == ConnectionState.Open)
-                    Con.Close();
-
+                if (Con.State == ConnectionState.Open) Con.Close();
                 Con.Open();
 
-                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM FlightTbl", Con);
+                string query = "select * from FlightTbl";
+                SqlDataAdapter sda = new SqlDataAdapter(query, Con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
-
-                FlightDGV.AutoGenerateColumns = true;
                 FlightDGV.DataSource = dt;
             }
-            catch (Exception ex)
+            catch (Exception Ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(Ex.Message);
             }
             finally
             {
-                if (Con.State == ConnectionState.Open)
-                    Con.Close();
+                if (Con.State == ConnectionState.Open) Con.Close();
             }
         }
 
@@ -60,35 +54,13 @@ namespace AirlineManagementSystem
 
         private void FlightDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < 0) return;
-
-            DataGridViewRow row = FlightDGV.Rows[e.RowIndex];
-
-            FcodeTb.Text = row.Cells[0].Value?.ToString();
-            SourceCb.SelectedItem = row.Cells[1].Value?.ToString();
-            DstCb.SelectedItem = row.Cells[2].Value?.ToString();
-            Seatnum.Text = row.Cells[4].Value?.ToString();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            FlightTbl Addfl = new FlightTbl();
-            Addfl.Show();
-            this.Hide();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            FcodeTb.Text = "";
-            Seatnum.Text = "";
+            if (e.RowIndex >= 0)
+            {
+                FcodeTb.Text = FlightDGV.Rows[e.RowIndex].Cells[0].Value.ToString();
+                SourceCb.SelectedItem = FlightDGV.Rows[e.RowIndex].Cells[1].Value.ToString();
+                DstCb.SelectedItem = FlightDGV.Rows[e.RowIndex].Cells[2].Value.ToString();
+                Seatnum.Text = FlightDGV.Rows[e.RowIndex].Cells[4].Value.ToString();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -101,35 +73,29 @@ namespace AirlineManagementSystem
             {
                 try
                 {
-                    if (Con.State == ConnectionState.Open)
-                        Con.Close();
-
+                    if (Con.State == ConnectionState.Open) Con.Close();
                     Con.Open();
 
-                    string query = @"UPDATE FlightTbl
-                                     SET Fsrc=@src, FDest=@dest, FDate=@date, FCap=@cap
-                                     WHERE Fcode=@code";
+                    string query = "update FlightTbl set Fsrc='" + SourceCb.SelectedItem.ToString() +
+                                   "', FDest='" + DstCb.SelectedItem.ToString() +
+                                   "', FDate='" + FDate.Value.Date.ToString("yyyy-MM-dd") +
+                                   "', FCap=" + Seatnum.Text +
+                                   " where Fcode='" + FcodeTb.Text + "'";
 
                     SqlCommand cmd = new SqlCommand(query, Con);
-                    cmd.Parameters.AddWithValue("@src", SourceCb.SelectedItem.ToString());
-                    cmd.Parameters.AddWithValue("@dest", DstCb.SelectedItem.ToString());
-                    cmd.Parameters.AddWithValue("@date", FDate.Value.Date);
-                    cmd.Parameters.AddWithValue("@cap", Seatnum.Text);
-                    cmd.Parameters.AddWithValue("@code", FcodeTb.Text);
-
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Flight Updated Successfully");
-                    populate();
                 }
-                catch (Exception ex)
+                catch (Exception Ex)
                 {
-                    MessageBox.Show("Update failed: " + ex.Message);
+                    MessageBox.Show(Ex.Message);
                 }
                 finally
                 {
-                    if (Con.State == ConnectionState.Open)
-                        Con.Close();
+                    if (Con.State == ConnectionState.Open) Con.Close();
                 }
+
+                populate();
             }
 
             FcodeTb.Text = "";
@@ -148,34 +114,53 @@ namespace AirlineManagementSystem
             {
                 try
                 {
-                    if (Con.State == ConnectionState.Open)
-                        Con.Close();
-
+                    if (Con.State == ConnectionState.Open) Con.Close();
                     Con.Open();
 
-                    string query = "DELETE FROM FlightTbl WHERE Fcode=@code";
+                    string query = "delete from FlightTbl where Fcode='" + FcodeTb.Text + "'";
                     SqlCommand cmd = new SqlCommand(query, Con);
-                    cmd.Parameters.AddWithValue("@code", FcodeTb.Text);
-
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Flight Deleted Successfully");
-                    populate();
                 }
-                catch (Exception ex)
+                catch (Exception Ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(Ex.Message);
                 }
                 finally
                 {
-                    if (Con.State == ConnectionState.Open)
-                        Con.Close();
+                    if (Con.State == ConnectionState.Open) Con.Close();
                 }
+
+                populate();
             }
 
             FcodeTb.Text = "";
             Seatnum.Text = "";
             SourceCb.SelectedItem = null;
             DstCb.SelectedItem = null;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FcodeTb.Text = "";
+            Seatnum.Text = "";
+            SourceCb.SelectedItem = null;
+            DstCb.SelectedItem = null;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FlightTbl addfl = new FlightTbl();
+            addfl.Show();
+            this.Hide();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
         }
     }
 }
