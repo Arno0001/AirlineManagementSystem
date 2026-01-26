@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+
 
 namespace AirlineManagementSystem
 {
@@ -20,10 +23,11 @@ namespace AirlineManagementSystem
 
         SqlConnection Con = new SqlConnection(
      @"Data Source=(LocalDB)\MSSQLLocalDB;
-      AttachDbFilename=C:\Users\ASUS\Documents\AirlineDb.mdf;
+      Initial Catalog=AirlineDb;
       Integrated Security=True;
-      Connect Timeout=30;
-      Encrypt=False");
+      Encrypt=False;
+      Connect Timeout=30");
+
 
         private bool isBinding = false;
         private bool isFetching = false;
@@ -49,6 +53,8 @@ namespace AirlineManagementSystem
                 TidCb.ValueMember = "Tid";
                 TidCb.DisplayMember = "Tid";
                 TidCb.DataSource = dt;
+
+                if (dt.Rows.Count > 0) TidCb.SelectedIndex = 0;
             }
             catch (Exception Ex)
             {
@@ -82,10 +88,15 @@ namespace AirlineManagementSystem
                 if (Con.State == ConnectionState.Open) Con.Close();
                 Con.Open();
 
-                int tid = Convert.ToInt32(TidCb.SelectedValue);
+                int tid = 0;
+
+                if (TidCb.SelectedValue != null && TidCb.SelectedValue.ToString() != "System.Data.DataRowView")
+                    int.TryParse(TidCb.SelectedValue.ToString(), out tid);
+                else
+                    int.TryParse(TidCb.Text, out tid);
 
                 SqlCommand cmd = new SqlCommand("select Fcode from TicketTbl where Tid = @Tid", Con);
-                cmd.Parameters.AddWithValue("@Tid", tid);
+                cmd.Parameters.Add("@Tid", SqlDbType.Int).Value = tid;
 
                 dr = cmd.ExecuteReader();
 
@@ -110,6 +121,12 @@ namespace AirlineManagementSystem
             }
         }
 
+        
+
+
+
+
+
         private void populate()
         {
             try
@@ -121,8 +138,7 @@ namespace AirlineManagementSystem
                 SqlDataAdapter sda = new SqlDataAdapter(query, Con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
-
-                CancellationDGV.DataSource = dt;
+                CancelDGV.DataSource = dt;
             }
             catch (Exception Ex)
             {
@@ -131,14 +147,21 @@ namespace AirlineManagementSystem
             finally
             {
                 if (Con.State == ConnectionState.Open) Con.Close();
+                
             }
         }
+
+
+
+
+
+
 
         private void CancellationTbl_Load(object sender, EventArgs e)
         {
             fillTicketId();
-            fetchfcode();
-            populate();
+            
+           populate();
         }
 
         private void label11_Click(object sender, EventArgs e)
@@ -156,9 +179,74 @@ namespace AirlineManagementSystem
             fetchfcode();
         }
 
-        private void TidCb_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void FcodeTb_TextChanged(object sender, EventArgs e)
         {
 
         }
+
+        private void TidCb_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            fetchfcode();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            CanIdTb.Text = "";
+            FcodeTb.Text = "";
+        }
+
+
+        private void deleteTicket()
+        {
+            if (CanIdTb.Text == "")
+            {
+                MessageBox.Show("Enter The Cancellation ID");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    string query = "delete from CancelTbl where CanId=" + CanIdTb.Text + "";
+                    SqlCommand cmd = new SqlCommand(query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Cancellation Deleted Successfully");
+                    Con.Close();
+                    populate();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                    if (Con.State == ConnectionState.Open) Con.Close();
+                }
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (CanIdTb.Text == "" || FcodeTb.Text == "")
+            {
+                MessageBox.Show("Missing Information");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    string query = "insert into CancelTbl values(" + CanIdTb.Text + "," + TidCb.Text + ",'" + FcodeTb.Text + "','" + CancDate.Value.Date + "')";
+                    SqlCommand cmd = new SqlCommand(query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Ticket Cancelled Successfully");
+                    Con.Close();
+
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                    if (Con.State == ConnectionState.Open) Con.Close();
+                }
+            }
+        }
+
     }
 }

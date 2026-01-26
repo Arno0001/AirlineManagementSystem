@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -11,13 +12,12 @@ namespace AirlineManagementSystem
         {
             InitializeComponent();
         }
-
         SqlConnection Con = new SqlConnection(
      @"Data Source=(LocalDB)\MSSQLLocalDB;
-      AttachDbFilename=C:\Users\ASUS\Documents\AirlineDb.mdf;
+      Initial Catalog=AirlineDb;
       Integrated Security=True;
-      Connect Timeout=30;
-      Encrypt=False");
+      Encrypt=False;
+      Connect Timeout=30");
 
 
 

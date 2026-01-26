@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.TidCb = new System.Windows.Forms.ComboBox();
-            this.CanId = new System.Windows.Forms.TextBox();
+            this.CanIdTb = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -38,13 +38,13 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.CancellationDGV = new System.Windows.Forms.DataGridView();
+            this.CancelDGV = new System.Windows.Forms.DataGridView();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.FcodeTb = new System.Windows.Forms.TextBox();
             this.CancDate = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.CancellationDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CancelDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // TidCb
@@ -58,14 +58,13 @@
             this.TidCb.SelectedIndexChanged += new System.EventHandler(this.TidCb_SelectedIndexChanged_1);
             this.TidCb.SelectionChangeCommitted += new System.EventHandler(this.TidCb_SelectionChangeCommitted);
             // 
-            // CanId
+            // CanIdTb
             // 
-            this.CanId.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CanId.Location = new System.Drawing.Point(190, 135);
-            this.CanId.Name = "CanId";
-            this.CanId.ReadOnly = true;
-            this.CanId.Size = new System.Drawing.Size(146, 28);
-            this.CanId.TabIndex = 87;
+            this.CanIdTb.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CanIdTb.Location = new System.Drawing.Point(190, 135);
+            this.CanIdTb.Name = "CanIdTb";
+            this.CanIdTb.Size = new System.Drawing.Size(146, 28);
+            this.CanIdTb.TabIndex = 87;
             // 
             // label18
             // 
@@ -164,19 +163,19 @@
             this.label4.TabIndex = 73;
             this.label4.Text = "Sky Jet Airline";
             // 
-            // CancellationDGV
+            // CancelDGV
             // 
-            this.CancellationDGV.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.CancellationDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CancellationDGV.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.CancellationDGV.Location = new System.Drawing.Point(46, 412);
-            this.CancellationDGV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.CancellationDGV.Name = "CancellationDGV";
-            this.CancellationDGV.RowHeadersWidth = 51;
-            this.CancellationDGV.RowTemplate.Height = 24;
-            this.CancellationDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.CancellationDGV.Size = new System.Drawing.Size(761, 248);
-            this.CancellationDGV.TabIndex = 91;
+            this.CancelDGV.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.CancelDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CancelDGV.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.CancelDGV.Location = new System.Drawing.Point(46, 412);
+            this.CancelDGV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CancelDGV.Name = "CancelDGV";
+            this.CancelDGV.RowHeadersWidth = 51;
+            this.CancelDGV.RowTemplate.Height = 24;
+            this.CancelDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.CancelDGV.Size = new System.Drawing.Size(761, 248);
+            this.CancelDGV.TabIndex = 91;
             // 
             // button4
             // 
@@ -190,6 +189,7 @@
             this.button4.TabIndex = 94;
             this.button4.Text = "Cancel";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -203,6 +203,7 @@
             this.button3.TabIndex = 93;
             this.button3.Text = "Back";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -225,6 +226,7 @@
             this.FcodeTb.Name = "FcodeTb";
             this.FcodeTb.Size = new System.Drawing.Size(146, 28);
             this.FcodeTb.TabIndex = 95;
+            this.FcodeTb.TextChanged += new System.EventHandler(this.FcodeTb_TextChanged);
             // 
             // CancDate
             // 
@@ -244,9 +246,9 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.CancellationDGV);
+            this.Controls.Add(this.CancelDGV);
             this.Controls.Add(this.TidCb);
-            this.Controls.Add(this.CanId);
+            this.Controls.Add(this.CanIdTb);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label17);
@@ -260,7 +262,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CancellationTbl";
             this.Load += new System.EventHandler(this.CancellationTbl_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.CancellationDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CancelDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,7 +270,7 @@
 
         #endregion
         private System.Windows.Forms.ComboBox TidCb;
-        private System.Windows.Forms.TextBox CanId;
+        private System.Windows.Forms.TextBox CanIdTb;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label17;
@@ -277,7 +279,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView CancellationDGV;
+        private System.Windows.Forms.DataGridView CancelDGV;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;

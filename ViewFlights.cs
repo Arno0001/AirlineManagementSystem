@@ -8,13 +8,15 @@ namespace AirlineManagementSystem
     public partial class ViewFlights : Form
     {
         SqlConnection Con = new SqlConnection(
-            @"Data Source=(LocalDB)\MSSQLLocalDB;
-              AttachDbFilename=C:\Users\ASUS\Documents\AirlineDb.mdf;
-              Integrated Security=True;
-              Connect Timeout=30;
-              Encrypt=False");
+     @"Data Source=(LocalDB)\MSSQLLocalDB;
+      Initial Catalog=AirlineDb;
+      Integrated Security=True;
+      Encrypt=False;
+      Connect Timeout=30");
+
 
         public ViewFlights()
+
         {
             InitializeComponent();
         }

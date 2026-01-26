@@ -1,18 +1,22 @@
 ﻿using System;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+
 
 namespace AirlineManagementSystem
 {
     public partial class ViewPassenger : Form
     {
-        private readonly SqlConnection Con = new SqlConnection(
-            @"Data Source=(LocalDB)\MSSQLLocalDB;
-              AttachDbFilename=C:\Users\ASUS\Documents\AirlineDb.mdf;
-              Integrated Security=True;
-              Connect Timeout=30;
-              Encrypt=False");
+        SqlConnection Con = new SqlConnection(
+     @"Data Source=(LocalDB)\MSSQLLocalDB;
+      Initial Catalog=AirlineDb;
+      Integrated Security=True;
+      Encrypt=False;
+      Connect Timeout=30");
+
+
 
         public ViewPassenger()
         {

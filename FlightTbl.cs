@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+using System.Data.SqlClient;   
 
 namespace AirlineManagementSystem
 {
@@ -13,11 +13,13 @@ namespace AirlineManagementSystem
         }
 
         SqlConnection Con = new SqlConnection(
-     @"Data Source=(LocalDB)\MSSQLLocalDB;
-      AttachDbFilename=C:\Users\ASUS\Documents\AirlineDb.mdf;
+    @"Data Source=(LocalDB)\MSSQLLocalDB;
+      Initial Catalog=AirlineDb;
       Integrated Security=True;
-      Connect Timeout=30;
-      Encrypt=False");
+      Encrypt=False;
+      Connect Timeout=30");
+
+
 
 
         private void label5_Click(object sender, EventArgs e)

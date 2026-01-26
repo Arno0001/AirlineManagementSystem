@@ -3,6 +3,7 @@ using System.Data;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+
 namespace AirlineManagementSystem
 {
     public partial class AddPassenger : Form
@@ -11,13 +12,13 @@ namespace AirlineManagementSystem
         {
             InitializeComponent();
         }
-
         SqlConnection Con = new SqlConnection(
      @"Data Source=(LocalDB)\MSSQLLocalDB;
-      AttachDbFilename=C:\Users\ASUS\Documents\AirlineDb.mdf;
+      Initial Catalog=AirlineDb;
       Integrated Security=True;
-      Connect Timeout=30;
-      Encrypt=False");
+      Encrypt=False;
+      Connect Timeout=30");
+
 
 
         private void AddPassenger_Load(object sender, EventArgs e)
