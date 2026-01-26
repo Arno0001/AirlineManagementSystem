@@ -13,7 +13,7 @@ namespace AirlineManagementSystem
             InitializeComponent();
         }
         SqlConnection Con = new SqlConnection(
-     @"Data Source=(LocalDB)\MSSQLLocalDB;
+    @"Data Source=(LocalDB)\MSSQLLocalDB;
       Initial Catalog=AirlineDb;
       Integrated Security=True;
       Encrypt=False;
